@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const optionsBtn = document.getElementById("optionsBtn"); 
     const showImagesBtn = document.getElementById("showImagesBtn"); 
     const homeLink = document.getElementById("homeLink"); 
-    const searchInput = document.getElementById("searchInput"); // Campo de búsqueda
+    const searchInput = document.getElementById("searchInput"); // Campo de búsqueda.
 
     // Función para mostrar solo el contenido deseado
     function mostrarContenido(contenidoAmostrar) {
         contenidoInicio.classList.add("d-none");
         contenidoGeneraciones.classList.add("d-none");
         contenidoImagenes.classList.add("d-none");
-        menuOpciones.classList.add("d-none"); // Ocultar menú de opciones por defecto
+        menuOpciones.classList.add("d-none"); // Ocultar menú de de generaciones por defecto.
 
         contenidoAmostrar.classList.remove("d-none");
     }
@@ -21,19 +21,19 @@ document.addEventListener("DOMContentLoaded", function () {
     // Mostrar contenido de inicio
     homeLink.addEventListener("click", function () {
         mostrarContenido(contenidoInicio);
-        menuOpciones.classList.add("d-none"); // se asegura de ocultar el menú
+        menuOpciones.classList.add("d-none"); // Se asegura de ocultar el menú de generaciones, me trajo bastante dificultad.
     });
 
     // Mostrar secciones de generaciones
     optionsBtn.addEventListener("click", function () {
         mostrarContenido(contenidoGeneraciones);
-        menuOpciones.classList.remove("d-none"); // Mostrar menú de opciones
+        menuOpciones.classList.remove("d-none"); // Mostrar lista de generaciones.
     });
 
     // Mostrar imágenes
     showImagesBtn.addEventListener("click", function () {
         mostrarContenido(contenidoImagenes);
-        menuOpciones.classList.add("d-none"); // Ocultar menú de opciones
+        menuOpciones.classList.add("d-none"); // Ocultar lista de generaciones.
     });
 
     // Manejo de opciones de generaciones
