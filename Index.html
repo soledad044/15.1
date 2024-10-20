@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generaciones de Pokémon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body {
+            background-image: url('https://images8.alphacoders.com/124/thumb-1920-1243956.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+        }
+        .generation-info {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#" aria-label="Nombre">GENERACIONES POKÉMON</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item mx-5">
+                    <a class="nav-link active" id="homeLink" aria-current="page" href="#">Inicio</a>
+                </li>
+                <li class="nav-item mx-5">
+                    <a class="nav-link" id="showImagesBtn" href="#">Imágenes</a>
+                </li>
+                <li class="nav-item mx-5">
+                    <button class="nav-link" id="optionsBtn">Generaciones</button>
+                </li>
+                </ul>
+                <form class="d-flex" role="search" aria-label="Formulario de búsqueda">
+                    <label for="searchInput" class="visually-hidden">Buscar:</label>
+                    <input id="searchInput" class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Campo de búsqueda">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+<div class="text-center my-5 generation-info" id="homeContent">
+    <h3>Resumen de Pokémon</h3>
+    <p>Pokémon es una franquicia que comenzó en 1996 y ha crecido para incluir múltiples generaciones, cada una con nuevos Pokémon, mecánicas de juego y mundos por explorar. Hasta la sexta generación, se han introducido más de 700 Pokémon diferentes, cada uno con su propio diseño y características únicas.</p>
+</div>
+
+<div class="col-lg-3 col-md-12 d-none" id="optionsMenu">
+    <div class="list-group" aria-label="Menú de opciones">
+        <button class="list-group-item list-group-item-action" data-generation="kanto">Kanto</button>
+        <button class="list-group-item list-group-item-action" data-generation="johto">Johto</button>
+        <button class="list-group-item list-group-item-action" data-generation="hoenn">Hoenn</button>
+        <button class="list-group-item list-group-item-action" data-generation="sinnoh">Sinnoh</button>
+        <button class="list-group-item list-group-item-action" data-generation="unova">Unova</button>
+        <button class="list-group-item list-group-item-action" data-generation="kalos">Kalos</button>
+    </div>
+</div>
+
+
+        <div class="col-lg-9 col-md-12">
+            <div id="generationContent" class="d-none">
+                <div class="generation-info d-none" id="kanto">
+                    <h4>Primera Generación: Kanto</h4>
+                    <p>Introducida en 1996, la primera generación presentó a 151 Pokémon, incluyendo a Pikachu, el icónico Pokémon de la franquicia. La región de Kanto es donde los entrenadores comenzaron su viaje.</p>
+                    <img src="assets/Kanto.jpg" alt="Kanto Region" class="img-fluid mb-3">
+                    <img src="assets/Kanto_Map.png" alt="Kanto Map" class="img-fluid mb-3">
+                </div>
+                <div class="generation-info d-none" id="johto">
+                    <h4>Segunda Generación: Johto</h4>
+                    <p>La segunda generación, lanzada en 1999, amplió el mundo con 100 nuevos Pokémon y añadió el sistema de día y noche, lo que permitió capturar Pokémon en diferentes momentos.</p>
+                    <img src="assets/Johto.png" alt="Johto Region" class="img-fluid mb-3">
+                    <img src="assets/Johto_map.jpg" alt="Johto Map" class="img-fluid mb-3">
+                </div>
+                <div class="generation-info d-none" id="hoenn">
+                    <h4>Tercera Generación: Hoenn</h4>
+                    <p>Presentada en 2002, la tercera generación trajo 135 Pokémon y mejoró los gráficos, introduciendo la región de Hoenn y nuevas mecánicas de juego.</p>
+                    <img src="assets/hoenn.jpg" alt="Hoenn Region" class="img-fluid mb-3">
+                    <img src="assets/Hoenn_Map.png" alt="Hoenn Map" class="img-fluid mb-3">
+                </div>
+                <div class="generation-info d-none" id="sinnoh">
+                    <h4>Cuarta Generación: Sinnoh</h4>
+                    <p>La cuarta generación, que debutó en 2006, trajo 107 Pokémon y presentó las evoluciones de algunos Pokémon de generaciones anteriores, así como la mecánica de las evoluciones por amistad.</p>
+                    <img src="assets/sinnoh.png" alt="Sinnoh Region" class="img-fluid mb-3">
+                    <img src="assets/sinnoh_map.jpg" alt="Sinnoh Map" class="img-fluid mb-3">
+                </div>
+                <div class="generation-info d-none" id="unova">
+                    <h4>Quinta Generación: Unova</h4>
+                    <p>Lanzada en 2010, la quinta generación incluyó 156 Pokémon y se centró en un diseño más diverso y dinámico, introduciendo una nueva historia y personajes.</p>
+                    <img src="assets/unova.jpg" alt="Unova Region" class="img-fluid mb-3">
+                    <img src="assets/unova_map.png" alt="Unova Map" class="img-fluid mb-3">
+                </div>
+                <div class="generation-info d-none" id="kalos">
+                    <h4>Sexta Generación: Kalos</h4>
+                    <p>Introducida en 2013, la sexta generación presentó 72 nuevos Pokémon y trajo consigo la evolución Mega, que permite a ciertos Pokémon transformarse en formas más poderosas.</p>
+                    <img src="assets/kalos.webp" alt="Kalos Region" class="img-fluid mb-3">
+                    <img src="assets/kalos_map.png" alt="Kalos Map" class="img-fluid mb-3">
+                </div>
+            </div>
+
+            <div id="allImages" class="d-none mt-4">
+              <h4>Imágenes de las Generaciones</h4>
+              <div class="row">
+                  <div class="col-md-4">
+                      <img src="assets/Kanto.jpg" alt="Kanto1" class="img-fluid mb-2">
+                      <img src="assets/Kanto_Map.png" alt="Kanto2" class="img-fluid mb-2">
+                      <img src="assets/kanto_starters.jpg" alt="Kanto3" class="img-fluid mb-2">
+                  </div>
+                  <div class="col-md-4">
+                      <img src="assets/Johto.png" alt="Johto1" class="img-fluid mb-2">
+                      <img src="assets/Johto_map.jpg" alt="Johto2" class="img-fluid mb-2">
+                      <img src="assets/johto_starters.jpg" alt="Johto3" class="img-fluid mb-2">
+                  </div>
+                  <div class="col-md-4">
+                      <img src="assets/hoenn.jpg" alt="Hoenn1" class="img-fluid mb-2">
+                      <img src="assets/Hoenn_Map.png" alt="Hoenn2" class="img-fluid mb-2">
+                      <img src="assets/hoenn_starters.jpg" alt="Hoenn3" class="img-fluid mb-2">
+                  </div>
+                  <div class="col-md-4">
+                      <img src="assets/sinnoh.png" alt="Sinnoh1" class="img-fluid mb-2">
+                      <img src="assets/sinnoh_map.jpg" alt="Sinnoh2" class="img-fluid mb-2">
+                      <img src="assets/sinnoh_starters.jpg" alt="Sinnoh3" class="img-fluid mb-2">
+                  </div>
+                  <div class="col-md-4">
+                      <img src="assets/unova.jpg" alt="Unova1" class="img-fluid mb-2">
+                      <img src="assets/unova_map.png" alt="Unova2" class="img-fluid mb-2">
+                      <img src="assets/unova_starters.jpg" alt="Unova3" class="img-fluid mb-2">
+                  </div>
+                  <div class="col-md-4">
+                      <img src="assets/kalos.webp" alt="Kalos1" class="img-fluid mb-2">
+                      <img src="assets/kalos_map.png" alt="Kalos2" class="img-fluid mb-2">
+                      <img src="assets/kalos_starters.jpg" alt="Kalos3" class="img-fluid mb-2">
+                  </div>
+              </div>
+          </div>
+      </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+</body>
+</html>
